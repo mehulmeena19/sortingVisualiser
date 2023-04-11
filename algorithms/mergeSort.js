@@ -87,7 +87,7 @@ async function merge(ele, low, mid, high){
 
 async function mergeSort(ele, l, r){
     if(l >= r){
-        //sorting complete
+        
         return;
     }
     const m = l + Math.floor((r - l) / 2);

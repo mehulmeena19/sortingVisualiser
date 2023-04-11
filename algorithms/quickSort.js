@@ -1,11 +1,11 @@
 async function partitionLomuto(ele, l, r){
     let i = l - 1;
-    ele[r].style.background = 'cyan'; //pivot
+    ele[r].style.background = 'cyan'; 
     for(let j = l; j <= r - 1; j++){
         if(hasPressedStop == true){
             return;
         }
-        ele[j].style.background = 'yellow'; //current element
+        ele[j].style.background = 'yellow'; 
         await delayTime(delay);
         if(hasPressedStop == true){
             return;
@@ -13,14 +13,14 @@ async function partitionLomuto(ele, l, r){
         if(parseInt(ele[j].style.height) < parseInt(ele[r].style.height)){
             i++;
             swap(ele[i], ele[j]);
-            // color 
+             
             ele[i].style.background = 'orange';
             if(i != j) ele[j].style.background = 'orange';
-            // pauseChamp
+            
             await delayTime(delay);
         }
         else{
-            // color if not less than pivot
+            
             ele[j].style.background = 'pink';
         }
     }
